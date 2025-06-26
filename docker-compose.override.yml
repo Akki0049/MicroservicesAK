@@ -1,7 +1,5 @@
-version: '3.4'
-
 services:
-  catalogue:
+  catalogue.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
@@ -9,13 +7,9 @@ services:
     ports:
       - "8080"
 
-  
-  inventory:
+  demoapp:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - "ConnectionStrings:CatalogueContext=Data Source=inventorydb;TrustServerCertificate=True;Initial Catalog=InventoryContext;User ID=sa;Password=Test@123456" 
     ports:
-      - "8080"
-
+      - "80"
 

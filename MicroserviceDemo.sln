@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebClient", "WebClient", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApp", "DemoApp\DemoApp.csproj", "{F16F5B98-6EE0-4A97-83AF-2B561D3C5FC0}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{65B74105-4906-408F-A569-B4F69AF5B91D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aks", "aks", "{8DC4D3D3-D321-4121-BF36-76CC91666B4F}"
 	ProjectSection(SolutionItems) = preProject
 		aks\cataloguedb-configmap.yml = aks\cataloguedb-configmap.yml
@@ -35,6 +33,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "minikube", "minikube", "{16
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogue", "Catalogue", "{AE3E4C85-209A-433B-9586-BA8DBE7E1DCB}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Catalogue\appsettings.Development.json = Services\Catalogue\appsettings.Development.json
+		Services\Catalogue\appsettings.json = Services\Catalogue\appsettings.json
+		Services\Catalogue\Catalogue.csproj = Services\Catalogue\Catalogue.csproj
+		Services\Catalogue\CatalogueModel.cs = Services\Catalogue\CatalogueModel.cs
+		Services\Catalogue\Program.cs = Services\Catalogue\Program.cs
+		Services\Catalogue\WeatherForecast.cs = Services\Catalogue\WeatherForecast.cs
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.Application", "Services\Catalogue\Catalogue.Application\Catalogue.Application.csproj", "{4F0CE210-0F25-4729-A552-DF5FF15CA5BD}"
 EndProject
@@ -43,6 +49,20 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.Infrastructure", "Services\Catalogue\Catalogue.Infrastructure\Catalogue.Infrastructure.csproj", "{1ECB6CBA-1E6E-47FE-9697-78EBDB3E0708}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogue.API", "Services\Catalogue\Catalogue.API\Catalogue.API.csproj", "{AD8FED18-6AE0-4F52-AF07-AEF6B966B49B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inventory", "Inventory", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Inventory\appsettings.Development.json = Services\Inventory\appsettings.Development.json
+		Services\Inventory\appsettings.json = Services\Inventory\appsettings.json
+		Services\Inventory\Inventory.csproj = Services\Inventory\Inventory.csproj
+		Services\Inventory\Inventory.http = Services\Inventory\Inventory.http
+		Services\Inventory\InventoryModel.cs = Services\Inventory\InventoryModel.cs
+		Services\Inventory\InventoryModelsController.cs = Services\Inventory\InventoryModelsController.cs
+		Services\Inventory\Program.cs = Services\Inventory\Program.cs
+		Services\Inventory\WeatherForecast.cs = Services\Inventory\WeatherForecast.cs
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,10 +74,6 @@ Global
 		{F16F5B98-6EE0-4A97-83AF-2B561D3C5FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F16F5B98-6EE0-4A97-83AF-2B561D3C5FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F16F5B98-6EE0-4A97-83AF-2B561D3C5FC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65B74105-4906-408F-A569-B4F69AF5B91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65B74105-4906-408F-A569-B4F69AF5B91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65B74105-4906-408F-A569-B4F69AF5B91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65B74105-4906-408F-A569-B4F69AF5B91D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F0CE210-0F25-4729-A552-DF5FF15CA5BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F0CE210-0F25-4729-A552-DF5FF15CA5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F0CE210-0F25-4729-A552-DF5FF15CA5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -74,6 +90,10 @@ Global
 		{AD8FED18-6AE0-4F52-AF07-AEF6B966B49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8FED18-6AE0-4F52-AF07-AEF6B966B49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD8FED18-6AE0-4F52-AF07-AEF6B966B49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +105,7 @@ Global
 		{766D18F3-0F07-42A5-827A-E5A3C1ED0302} = {AE3E4C85-209A-433B-9586-BA8DBE7E1DCB}
 		{1ECB6CBA-1E6E-47FE-9697-78EBDB3E0708} = {AE3E4C85-209A-433B-9586-BA8DBE7E1DCB}
 		{AD8FED18-6AE0-4F52-AF07-AEF6B966B49B} = {AE3E4C85-209A-433B-9586-BA8DBE7E1DCB}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {91EE7AE3-A788-4FF8-B36A-B109ADAB5F8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC49B3CE-62B3-4F40-8868-1F9AD8B3BBD5}
